@@ -23,7 +23,8 @@ for I in $(seq 0 $PREVPERIODSALLOWED); do
     fi;
 done;
 if [ $FOUND -eq 1 ]; then
-        echo "OK";
+    echo "OK";
 else
-        echo "ERR";
-fi
+    echo "ERR";
+    echo $IN DENIED `date` >> /var/log/squid/authdenied.log
+if
